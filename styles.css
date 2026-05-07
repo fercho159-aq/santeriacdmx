@@ -26,10 +26,11 @@
   /* Whatsapp brand only (single-emoji exception) */
   --whatsapp:     #128C7E;
 
-  /* Type */
-  --serif-display: "Cormorant Garamond", "Cardo", Georgia, "Times New Roman", serif;
-  --serif-body:    "Source Serif 4", "Crimson Pro", "Cardo", Georgia, serif;
-  --mono:          "JetBrains Mono", ui-monospace, "SFMono-Regular", "Söhne Mono", Menlo, monospace;
+  /* Type — single family, weight hierarchy */
+  --serif-display: "Rubik", system-ui, -apple-system, sans-serif;
+  --serif-body:    "Rubik", system-ui, -apple-system, sans-serif;
+  --mono:          "Rubik", system-ui, -apple-system, sans-serif;
+  --white:         #FFFFFF;
 
   --max:          1240px;
   --gutter:       clamp(20px, 4vw, 36px);
@@ -81,18 +82,18 @@ hr{ border: 0; border-top: 1px solid var(--rule); margin: 0; }
 /* ========== Type system ========== */
 h1, h2, h3, h4{
   font-family: var(--serif-display);
-  font-weight: 500;
-  letter-spacing: -0.022em;
-  line-height: 0.96;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.1;
   color: var(--ink);
   margin: 0 0 .35em;
 }
-h1{ font-weight: 600; }
+h1{ font-weight: 700; }
 .display{
   font-family: var(--serif-display);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 0.92;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.05;
 }
 
 .kicker{
@@ -257,10 +258,10 @@ h1{ font-weight: 600; }
 .hero__content{ max-width: 100%; }
 .hero__title{
   font-family: var(--serif-display);
-  font-weight: 600;
-  font-size: clamp(3.4rem, 13vw, 11rem);
-  line-height: 0.88;
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  font-size: clamp(2.8rem, 9vw, 7.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.022em;
   margin: 0 0 0.18em;
   color: var(--ink);
 }
@@ -269,11 +270,11 @@ h1{ font-weight: 600; }
   font-family: var(--serif-display);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(1.25rem, 2.6vw, 1.85rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  letter-spacing: 0;
   color: var(--ink-soft);
   margin: 0.4em 0 0;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .hero__sub em{ font-style: normal; color: var(--ink); }
 .hero__lede{
@@ -294,33 +295,33 @@ h1{ font-weight: 600; }
 
 /* ========== Symptoms — narrative paragraph ========== */
 .alerta{
-  padding: clamp(80px, 14vh, 140px) 0;
+  padding: clamp(56px, 9vh, 96px) 0;
   border-bottom: 1px solid var(--rule);
 }
 .alerta__prose{
-  max-width: 32ch;
+  max-width: 58ch;
   margin: 0 0 40px;
 }
 .alerta__prose p{
   font-family: var(--serif-display);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
-  letter-spacing: -0.012em;
-  line-height: 1.18;
+  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  letter-spacing: -0.005em;
+  line-height: 1.45;
   color: var(--ink);
   margin: 0 0 0.6em;
 }
 .alerta__prose .alerta__verdict{
   font-style: normal;
-  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   color: var(--ink-soft);
   margin-top: 0.8em;
 }
 
 /* ========== Intro ========== */
 .intro{
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: clamp(56px, 9vh, 96px) 0;
   border-bottom: 1px solid var(--rule);
 }
 .intro__grid{
@@ -332,10 +333,10 @@ h1{ font-weight: 600; }
 .intro__media .placeholder{ aspect-ratio: 4/5; }
 .intro__copy h3.big{
   font-family: var(--serif-display);
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 0.98;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
   margin-bottom: 0.5em;
 }
 .intro__copy p{
@@ -352,7 +353,7 @@ h1{ font-weight: 600; }
 
 /* ========== Featured (consultas) ========== */
 .featured{
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: clamp(56px, 9vh, 96px) 0;
   border-bottom: 1px solid var(--rule);
 }
 .featured__grid{
@@ -361,10 +362,10 @@ h1{ font-weight: 600; }
 .featured__media{ order: -1; max-width: 520px; margin: 0 auto; width: 100%; }
 .featured__copy h3.big{
   font-family: var(--serif-display);
-  font-size: clamp(2.2rem, 4.6vw, 3.6rem);
-  font-weight: 500;
-  letter-spacing: -0.022em;
-  line-height: 1;
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.12;
   margin-bottom: 0.5em;
 }
 .featured__copy p{
@@ -384,19 +385,19 @@ h1{ font-weight: 600; }
 
 /* ========== Services — editorial index ========== */
 .services{
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: clamp(56px, 9vh, 96px) 0;
   border-bottom: 1px solid var(--rule);
 }
 .section-head{
   max-width: 760px;
-  margin: 0 0 64px;
+  margin: 0 0 48px;
 }
 .section-head .big{
   font-family: var(--serif-display);
-  font-size: clamp(2.4rem, 5.5vw, 4.6rem);
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 0.98;
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  line-height: 1.1;
   margin-bottom: 0.4em;
 }
 .section-head p{
@@ -407,14 +408,14 @@ h1{ font-weight: 600; }
 
 .services-head{
   max-width: 920px;
-  margin-bottom: clamp(48px, 8vh, 96px);
+  margin-bottom: clamp(32px, 5vh, 60px);
 }
 .services-head__title{
   font-family: var(--serif-display);
-  font-size: clamp(2.2rem, 5.4vw, 4.6rem);
-  font-weight: 500;
-  letter-spacing: -0.028em;
-  line-height: 1.02;
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.2;
   color: var(--ink);
 }
 
@@ -439,10 +440,10 @@ h1{ font-weight: 600; }
 }
 .index__name{
   font-family: var(--serif-display);
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
   color: var(--ink);
   margin: 0;
 }
@@ -461,35 +462,38 @@ h1{ font-weight: 600; }
 
 @media (min-width: 900px){
   .index__item{
-    grid-template-columns: 64px 1.4fr 1.6fr;
-    grid-template-rows: auto auto;
-    column-gap: 48px;
-    row-gap: 18px;
-    padding: 56px 0;
-    align-items: baseline;
+    grid-template-columns: 48px 1fr 1.4fr auto;
+    grid-template-rows: auto;
+    column-gap: 40px;
+    row-gap: 0;
+    padding: 36px 0;
+    align-items: center;
   }
   .index__num{
     grid-column: 1; grid-row: 1;
-    font-size: 1.1rem;
-    padding-top: 14px;
-    align-self: start;
+    font-size: 1rem;
+    align-self: center;
   }
   .index__name{
     grid-column: 2; grid-row: 1;
-    align-self: start;
+    align-self: center;
   }
   .index__desc{
     grid-column: 3; grid-row: 1;
-    align-self: start;
-    padding-top: 18px;
+    align-self: center;
+    padding-top: 0;
+    max-width: 44ch;
   }
   .index__link{
-    grid-column: 2 / 4; grid-row: 2;
+    grid-column: 4; grid-row: 1;
+    justify-self: end;
+    margin-top: 0;
+    white-space: nowrap;
   }
 }
 
 .services__figure{
-  margin: clamp(48px, 8vh, 96px) 0;
+  margin: clamp(32px, 6vh, 64px) 0;
   padding: 0 var(--gutter);
 }
 .services__figure .placeholder{
@@ -511,7 +515,7 @@ h1{ font-weight: 600; }
   }
 }
 
-.services__cta{ margin-top: clamp(56px, 9vh, 100px); }
+.services__cta{ margin-top: clamp(36px, 6vh, 64px); }
 
 /* ========== Placeholders ========== */
 .placeholder{
@@ -538,7 +542,7 @@ h1{ font-weight: 600; }
 
 /* ========== Misas — single narrow column essay + bleed image ========== */
 .misas{
-  padding: clamp(80px, 14vh, 140px) 0 0;
+  padding: clamp(56px, 9vh, 96px) 0 0;
   border-bottom: 1px solid var(--rule);
 }
 .misas__essay{
@@ -547,11 +551,11 @@ h1{ font-weight: 600; }
 }
 .misas__title{
   font-family: var(--serif-display);
-  font-size: clamp(2rem, 4.4vw, 3.6rem);
-  font-weight: 500;
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  font-weight: 600;
   font-style: italic;
-  letter-spacing: -0.022em;
-  line-height: 1.08;
+  letter-spacing: -0.008em;
+  line-height: 1.25;
   margin-bottom: 0.7em;
   color: var(--ink);
 }
@@ -562,7 +566,7 @@ h1{ font-weight: 600; }
 }
 .misas__essay > a{ display: inline-block; margin-top: 0.4em; }
 .misas__bleed{
-  margin: clamp(64px, 10vh, 120px) 0 0;
+  margin: clamp(40px, 7vh, 80px) 0 0;
   padding: 0;
 }
 .misas__bleed .placeholder{
@@ -573,7 +577,7 @@ h1{ font-weight: 600; }
 
 /* ========== TikTok ========== */
 .tiktok{
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: clamp(56px, 9vh, 96px) 0;
   border-bottom: 1px solid var(--rule);
   background: var(--paper-deep);
 }
@@ -586,7 +590,7 @@ h1{ font-weight: 600; }
 
 /* ========== Testimonios — pull-quote + secondary trio ========== */
 .testimonios{
-  padding: clamp(90px, 14vh, 150px) 0;
+  padding: clamp(60px, 9vh, 100px) 0;
   border-bottom: 1px solid var(--rule);
 }
 .rating-line{
@@ -599,8 +603,8 @@ h1{ font-weight: 600; }
 }
 
 .pullquote{
-  margin: 0 0 clamp(56px, 9vh, 100px);
-  max-width: 22ch;
+  margin: 0 0 clamp(40px, 7vh, 72px);
+  max-width: 100%;
   position: relative;
 }
 .pullquote blockquote{ margin: 0; }
@@ -608,12 +612,13 @@ h1{ font-weight: 600; }
   font-family: var(--serif-display);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(2rem, 6vw, 4.6rem);
-  letter-spacing: -0.028em;
-  line-height: 1.04;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  letter-spacing: -0.005em;
+  line-height: 1.45;
   color: var(--ink);
   margin: 0 0 0.8em;
-  text-indent: -0.45em;
+  text-indent: -0.3em;
+  max-width: 68ch;
 }
 .pullquote figcaption{
   display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline;
@@ -655,9 +660,9 @@ h1{ font-weight: 600; }
   font-family: var(--serif-display);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
-  letter-spacing: -0.012em;
-  line-height: 1.35;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  letter-spacing: 0;
+  line-height: 1.5;
   color: var(--ink);
   margin: 0;
 }
@@ -676,15 +681,13 @@ h1{ font-weight: 600; }
 }
 
 @media (min-width: 800px){
-  .pullquote{ max-width: 18ch; }
-  .pullquote blockquote p{ font-size: clamp(2.6rem, 6.5vw, 5.4rem); }
   .quotes-row{ grid-template-columns: 1fr 1fr 1fr; column-gap: 44px; }
   .quote-small{ padding: 32px 0; }
 }
 
 /* ========== FAQ ========== */
 .faq{
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: clamp(56px, 9vh, 96px) 0;
   border-bottom: 1px solid var(--rule);
 }
 .faq__list{ max-width: 780px; }
@@ -697,9 +700,9 @@ h1{ font-weight: 600; }
   list-style: none; cursor: pointer;
   padding: 22px 0;
   font-family: var(--serif-display);
-  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
   font-weight: 500;
-  letter-spacing: -0.012em;
+  letter-spacing: 0;
   color: var(--ink);
   display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
 }
@@ -725,16 +728,16 @@ h1{ font-weight: 600; }
 
 /* ========== Final CTA ========== */
 .final-cta{
-  padding: clamp(90px, 14vh, 160px) 0;
+  padding: clamp(60px, 10vh, 110px) 0;
   border-bottom: 1px solid var(--rule);
 }
 .final-cta__wrap{ max-width: 760px; }
 .final-cta h2{
   font-family: var(--serif-display);
-  font-size: clamp(2.4rem, 6vw, 5rem);
-  font-weight: 500;
-  letter-spacing: -0.028em;
-  line-height: 0.96;
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
   margin-bottom: 0.5em;
   color: var(--ink);
 }
@@ -756,7 +759,7 @@ h1{ font-weight: 600; }
 
 /* ========== Footer — address/hours prominent, social inline ========== */
 .site-footer{
-  padding: clamp(80px, 12vh, 130px) 0 30px;
+  padding: clamp(56px, 9vh, 96px) 0 30px;
   background: var(--paper);
   color: var(--ink-soft);
   border-top: 1px solid var(--rule);
@@ -764,10 +767,10 @@ h1{ font-weight: 600; }
 .footer__hero{ max-width: 720px; }
 .footer__address{
   font-family: var(--serif-display);
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 500;
-  letter-spacing: -0.022em;
-  line-height: 1.05;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   color: var(--ink);
   margin: 0 0 36px;
 }
