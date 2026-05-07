@@ -4,24 +4,24 @@
    ===================================================== */
 
 :root{
-  /* Paper + ink */
-  --paper:        #F4EFE6;
-  --paper-deep:   #EAE3D6;
-  --paper-warm:   #EFE7D5;
-  --ink:          #1A0F08;
-  --ink-soft:     rgba(26,15,8,.74);
-  --ink-mute:     rgba(26,15,8,.56);
-  --ink-faint:    rgba(26,15,8,.32);
-  --rule:         rgba(26,15,8,.18);
-  --rule-soft:    rgba(26,15,8,.10);
+  /* Brand palette */
+  --paper:        #FFFFFF;
+  --paper-deep:   #F8F8F8;
+  --paper-warm:   #FAFAF8;
+  --ink:          #2C3E50;
+  --ink-soft:     rgba(44,62,80,.72);
+  --ink-mute:     rgba(44,62,80,.54);
+  --ink-faint:    rgba(44,62,80,.30);
+  --rule:         rgba(44,62,80,.16);
+  --rule-soft:    rgba(44,62,80,.08);
 
-  /* Orisha accents (one per section) */
-  --eleggua-red:  #B0231C;
-  --eleggua-black:#0A0807;
-  --oshun:        #B58326;
-  --yemaya:       #1B3358;
-  --obatala:      #FAFAFA;
-  --babalu:       #5B2C6F;
+  /* Brand accent + secondary colors */
+  --eleggua-red:  #E8674F;
+  --eleggua-black:#000000;
+  --oshun:        #D4A574;
+  --yemaya:       #2C5F8D;
+  --obatala:      #FFFFFF;
+  --babalu:       #5B4C8A;
 
   /* Whatsapp brand only (single-emoji exception) */
   --whatsapp:     #128C7E;
