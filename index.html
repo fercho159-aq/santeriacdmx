@@ -91,42 +91,34 @@
 
 <main id="top">
 
-<!-- HERO -->
+<!-- HERO — asymmetric editorial: 7-col title left, 5-col vertical photo right -->
 <section class="hero">
-  <div class="container hero__inner">
+  <div class="container hero__grid">
     <div class="hero__content reveal">
-      <p class="kicker kicker--with-line">Templo Ile Ona Ire · Ciudad de México</p>
-      <h1 class="hero__title">
-        <span class="display">Ile Ona Ire</span>
-        <span class="hero__sub">La mejor opción de <em>Santería</em> en CDMX</span>
-      </h1>
+      <p class="kicker kicker--with-line">Templo Ile Ona Ire · Ciudad de México · Desde 2010</p>
+      <h1 class="hero__title">Ile Ona Ire</h1>
+      <p class="hero__sub">La mejor opción de <em>Santería</em> en CDMX.</p>
       <p class="hero__lede">¿Sientes que algo no fluye en tu vida? Mala suerte que no se va, envidias, sueños extraños, amores rotos. Aquí encuentras respuestas reales y trabajos auténticos de la religión Yoruba, conducidos por Babalawos e Olorishas formados en la tradición.</p>
-
-      <div class="hero__cta">
-        <a class="btn" href="https://wa.me/525612350083?text=Hola%2C%20necesito%20una%20consulta" target="_blank" rel="noopener">Solicitar consulta</a>
-        <a class="link-mono" href="#servicios">Ver los trabajos</a>
-      </div>
+      <a class="link-underline link-underline--lg" href="https://wa.me/525612350083?text=Hola%2C%20necesito%20una%20consulta" target="_blank" rel="noopener">Solicitar una consulta</a>
     </div>
+    <aside class="hero__media reveal">
+      <!-- TODO: foto real vertical de la fachada del templo o del altar principal, no IA, no stock genérico -->
+      <div class="placeholder placeholder--portrait">
+        <span class="placeholder__caption">Foto pendiente: fachada del templo o altar principal en formato vertical</span>
+      </div>
+    </aside>
   </div>
 </section>
 
-<!-- "Si te está pasando esto" — Phase 1+2 keeps grid shape, no emojis, no inline bold; Phase 4 will rewrite as paragraph -->
+<!-- Symptoms — narrative single paragraph, not bullets -->
 <section class="alerta" id="alerta">
   <div class="container">
     <p class="kicker">Lo que probablemente sientes</p>
-    <h2 class="alerta__title">Si te está pasando esto, no es <span>coincidencia</span>.</h2>
-    <ul class="alerta__grid">
-      <li>Sientes que alguien te observa o algo te pesa al dormir.</li>
-      <li>Tu pareja se alejó sin razón aparente y nada que hagas funciona.</li>
-      <li>El dinero se te va aunque trabajes el doble.</li>
-      <li>Sueñas con personas muertas o tienes pesadillas recurrentes.</li>
-      <li>Sientes envidia a tu alrededor y todo se traba.</li>
-      <li>Has probado de todo y nada te funciona espiritualmente.</li>
-    </ul>
-    <div class="alerta__cta">
-      <p>Lo que sientes tiene nombre. Y tiene solución.</p>
-      <a class="link-underline" href="https://wa.me/525612350083?text=Hola%2C%20necesito%20orientación" target="_blank" rel="noopener">Habla con un Babalawo</a>
+    <div class="alerta__prose reveal">
+      <p>Sientes que alguien te observa al dormir. Tu pareja se alejó sin razón aparente. El dinero se va aunque trabajes el doble. Sueñas con personas muertas. Sientes envidia a tu alrededor y todo se traba. Has probado de todo, y nada te funciona espiritualmente.</p>
+      <p class="alerta__verdict">Lo que sientes tiene nombre. Y tiene solución.</p>
     </div>
+    <a class="link-underline" href="https://wa.me/525612350083?text=Hola%2C%20necesito%20orientación" target="_blank" rel="noopener">Habla con un Babalawo</a>
   </div>
 </section>
 
@@ -165,77 +157,139 @@
   </div>
 </section>
 
-<!-- SERVICES grid (Phase 1+2: cleaned cards; Phase 3 will replace with editorial index) -->
+<!-- SERVICES — editorial index with roman numerals and bleed figures -->
 <section class="services" id="servicios">
-  <div class="container">
-    <header class="section-head reveal">
-      <p class="kicker">Lo que hacemos</p>
-      <h2 class="big">Nuestros trabajos</h2>
-      <p>Cada trabajo se realiza con fundamento, respeto y la ceremonia correcta. Esto es una muestra de lo que ofrecemos en el templo.</p>
-    </header>
+  <div class="container services-head reveal">
+    <p class="kicker">Nuestros trabajos</p>
+    <h2 class="services-head__title">Cada trabajo se realiza con fundamento, respeto y la ceremonia correcta.</h2>
+  </div>
 
-    <div class="cards" id="trabajos">
-      <article class="card reveal">
-        <h3>Amarre</h3>
-        <p>Se hacen amarres para atraer al ser amado. Con el ceremonial se hará que la persona interesada siempre piense en uno, sienta la necesidad de buscarnos, y que la idea de la felicidad la asocie únicamente con nosotros.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20información%20sobre%20Amarre" target="_blank" rel="noopener">Pedir info</a>
+  <div class="container">
+    <div class="index" id="trabajos">
+      <article class="index__item reveal">
+        <span class="index__num">I</span>
+        <h3 class="index__name">Amarre</h3>
+        <p class="index__desc">Se hacen amarres para atraer al ser amado. Con el ceremonial se hará que la persona interesada siempre piense en uno, sienta la necesidad de buscarnos, y que la idea de la felicidad la asocie únicamente con nosotros.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20información%20sobre%20Amarre" target="_blank" rel="noopener">Pedir info</a>
       </article>
-      <article class="card reveal">
-        <h3>Consulta con Ekuele</h3>
-        <p>Realizada por un Babalawo que con el oráculo de IFA (Ekuele) hace la adivinación. Ifa es el Orisha encargado de conocer el destino en la tierra de todos los seres humanos.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20una%20consulta%20con%20Ekuele" target="_blank" rel="noopener">Pedir info</a>
+
+      <article class="index__item reveal">
+        <span class="index__num">II</span>
+        <h3 class="index__name">Consulta con Ekuele</h3>
+        <p class="index__desc">Realizada por un Babalawo que con el oráculo de IFA (Ekuele) hace la adivinación. Ifa es el Orisha encargado de conocer el destino en la tierra de todos los seres humanos.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20una%20consulta%20con%20Ekuele" target="_blank" rel="noopener">Pedir info</a>
       </article>
-      <article class="card reveal">
-        <h3>Protecciones</h3>
-        <p>Collares, pulseras y todo tipo de ceremonias para proteger a las personas, fundamentadas con ceremonia. Cada persona tiene la protección específica que ayuda a su situación.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20una%20protección" target="_blank" rel="noopener">Pedir info</a>
-      </article>
-      <article class="card reveal">
-        <h3>Limpias</h3>
-        <p>Las limpias nos ayudan a desprender todo este tipo de energías negativas. Una vez que tu energía está limpia, todo empieza a fluir correctamente. Personas, autos, casas, negocios.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20una%20limpia" target="_blank" rel="noopener">Pedir info</a>
-      </article>
-      <article class="card reveal">
-        <h3>Lectura de caracoles</h3>
-        <p>Realizada por medio de Diloggun (caracol) en Eleggua, Orisha encargado de presentar ante nosotros toda la situación de la persona. Tiene la llave de los caminos y los abre o cierra a voluntad.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20una%20lectura%20de%20caracoles" target="_blank" rel="noopener">Pedir info</a>
-      </article>
-      <article class="card reveal">
-        <h3>Lectura de cartas</h3>
-        <p>Realizada con un tarotista con el estudio para la correcta interpretación en las cartas, así como la espiritualidad para ser eficaz al brindar el apoyo al consultante.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20una%20lectura%20de%20cartas" target="_blank" rel="noopener">Pedir info</a>
-      </article>
-      <article class="card reveal">
-        <h3>Entrega de santos</h3>
-        <p>Entrega de Guerreros, Orishas de adimu, collares. Los Guerreros son los primeros Orishas que debe recibir el aleyo interesado en traer a la regla de osha: dan protección, apoyo, abren caminos y bendicen.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20información%20sobre%20Entrega%20de%20santos" target="_blank" rel="noopener">Pedir info</a>
-      </article>
-      <article class="card reveal">
-        <h3>Iniciaciones</h3>
-        <p>Coronación del santo (Yoko Osha): la iniciación más importante de la regla de osha. Cada persona tiene un Orisha Alagbatori, y este es el Orisha que se corona. La persona pasa de aleyo a iyawó.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20información%20sobre%20Iniciaciones" target="_blank" rel="noopener">Pedir info</a>
-      </article>
-      <article class="card reveal">
-        <h3>Rayamientos (Palo aayompe)</h3>
-        <p>El rayamiento de Ngueyo es la protección y primera iniciación principal de todo Ngangulero. Es un pacto donde los espíritus acuerdan proteger y levantar la situación de la persona iniciada a la máxima brevedad.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20información%20sobre%20Rayamientos" target="_blank" rel="noopener">Pedir info</a>
-      </article>
-      <article class="card reveal">
-        <h3>Toque de cajón y guiro</h3>
-        <p>Contamos con músicos para el toque a tus Orishas, Ngangas o espíritus, para agradecer un favor obtenido o pedir por una situación realmente fuerte, como vencer alguna dificultad grande.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20un%20toque%20de%20cajón%20o%20güiro" target="_blank" rel="noopener">Pedir info</a>
-      </article>
-      <article class="card reveal">
-        <h3>Clases de percusión religiosa</h3>
-        <p>Aprenderás a tocar tambor (congas), claves, cencerro, redoba, campanas y más. Toques que pueden usarse en una misa espiritual, en una ceremonia de palo mayombe o un toque a Orishas.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20clases%20de%20percusión%20religiosa" target="_blank" rel="noopener">Pedir info</a>
-      </article>
-      <article class="card reveal">
-        <h3>Desarrollo espiritual</h3>
-        <p>Sesiones para desarrollar a la materia (persona) y mejorar la percepción espiritual. Si se tiene el camino, también se prepara para bajar muerto.</p>
-        <a class="card__cta" href="https://wa.me/525612350083?text=Quiero%20clases%20de%20desarrollo%20espiritual" target="_blank" rel="noopener">Pedir info</a>
+
+      <article class="index__item reveal">
+        <span class="index__num">III</span>
+        <h3 class="index__name">Protecciones</h3>
+        <p class="index__desc">Collares, pulseras y todo tipo de ceremonias para proteger a las personas, fundamentadas con ceremonia. Cada persona tiene la protección específica que ayuda a su situación.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20una%20protección" target="_blank" rel="noopener">Pedir info</a>
       </article>
     </div>
+  </div>
+
+  <!-- Bleed figure right -->
+  <figure class="services__figure services__figure--right reveal">
+    <!-- TODO: foto real de un toque al tambor o iyawó vestido de blanco, formato vertical 3:4 -->
+    <div class="placeholder placeholder--portrait">
+      <span class="placeholder__caption">Foto pendiente: toque de tambor o iyawó en presentación, vertical 3:4</span>
+    </div>
+  </figure>
+
+  <div class="container">
+    <div class="index">
+      <article class="index__item reveal">
+        <span class="index__num">IV</span>
+        <h3 class="index__name">Limpias</h3>
+        <p class="index__desc">Las limpias nos ayudan a desprender todo este tipo de energías negativas. Una vez que tu energía está limpia, todo empieza a fluir correctamente. Personas, autos, casas, negocios.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20una%20limpia" target="_blank" rel="noopener">Pedir info</a>
+      </article>
+
+      <article class="index__item reveal">
+        <span class="index__num">V</span>
+        <h3 class="index__name">Lectura de caracoles</h3>
+        <p class="index__desc">Realizada por medio de Diloggun (caracol) en Eleggua, Orisha encargado de presentar ante nosotros toda la situación de la persona. Tiene la llave de los caminos y los abre o cierra a voluntad.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20una%20lectura%20de%20caracoles" target="_blank" rel="noopener">Pedir info</a>
+      </article>
+
+      <article class="index__item reveal">
+        <span class="index__num">VI</span>
+        <h3 class="index__name">Lectura de cartas</h3>
+        <p class="index__desc">Realizada con un tarotista con el estudio para la correcta interpretación en las cartas, así como la espiritualidad para ser eficaz al brindar el apoyo al consultante.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20una%20lectura%20de%20cartas" target="_blank" rel="noopener">Pedir info</a>
+      </article>
+    </div>
+  </div>
+
+  <!-- Bleed figure left -->
+  <figure class="services__figure services__figure--left reveal">
+    <!-- TODO: foto real del altar de Eleggua del templo, vertical 3:4 -->
+    <div class="placeholder placeholder--portrait">
+      <span class="placeholder__caption">Foto pendiente: altar de Eleggua del templo, vertical 3:4</span>
+    </div>
+  </figure>
+
+  <div class="container">
+    <div class="index">
+      <article class="index__item reveal">
+        <span class="index__num">VII</span>
+        <h3 class="index__name">Entrega de santos</h3>
+        <p class="index__desc">Entrega de Guerreros, Orishas de adimu, collares. Los Guerreros son los primeros Orishas que debe recibir el aleyo interesado en traer a la regla de osha: dan protección, apoyo, abren caminos y bendicen.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20información%20sobre%20Entrega%20de%20santos" target="_blank" rel="noopener">Pedir info</a>
+      </article>
+
+      <article class="index__item reveal">
+        <span class="index__num">VIII</span>
+        <h3 class="index__name">Iniciaciones</h3>
+        <p class="index__desc">Coronación del santo (Yoko Osha): la iniciación más importante de la regla de osha. Cada persona tiene un Orisha Alagbatori, y este es el Orisha que se corona. La persona pasa de aleyo a iyawó.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20información%20sobre%20Iniciaciones" target="_blank" rel="noopener">Pedir info</a>
+      </article>
+
+      <article class="index__item reveal">
+        <span class="index__num">IX</span>
+        <h3 class="index__name">Rayamientos · Palo aayompe</h3>
+        <p class="index__desc">El rayamiento de Ngueyo es la protección y primera iniciación principal de todo Ngangulero. Es un pacto donde los espíritus acuerdan proteger y levantar la situación de la persona iniciada a la máxima brevedad.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20información%20sobre%20Rayamientos" target="_blank" rel="noopener">Pedir info</a>
+      </article>
+    </div>
+  </div>
+
+  <!-- Bleed figure right -->
+  <figure class="services__figure services__figure--right reveal">
+    <!-- TODO: foto real de manos en consulta de caracol o tambores, vertical 3:4 -->
+    <div class="placeholder placeholder--portrait">
+      <span class="placeholder__caption">Foto pendiente: manos en consulta de caracol o tambor batá, vertical 3:4</span>
+    </div>
+  </figure>
+
+  <div class="container">
+    <div class="index">
+      <article class="index__item reveal">
+        <span class="index__num">X</span>
+        <h3 class="index__name">Toque de cajón y guiro</h3>
+        <p class="index__desc">Contamos con músicos para el toque a tus Orishas, Ngangas o espíritus, para agradecer un favor obtenido o pedir por una situación realmente fuerte, como vencer alguna dificultad grande.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20un%20toque%20de%20cajón%20o%20güiro" target="_blank" rel="noopener">Pedir info</a>
+      </article>
+
+      <article class="index__item reveal">
+        <span class="index__num">XI</span>
+        <h3 class="index__name">Clases de percusión religiosa</h3>
+        <p class="index__desc">Aprenderás a tocar tambor (congas), claves, cencerro, redoba, campanas y más. Toques que pueden usarse en una misa espiritual, en una ceremonia de palo mayombe o un toque a Orishas.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20clases%20de%20percusión%20religiosa" target="_blank" rel="noopener">Pedir info</a>
+      </article>
+
+      <article class="index__item reveal">
+        <span class="index__num">XII</span>
+        <h3 class="index__name">Desarrollo espiritual</h3>
+        <p class="index__desc">Sesiones para desarrollar a la materia (persona) y mejorar la percepción espiritual. Si se tiene el camino, también se prepara para bajar muerto.</p>
+        <a class="index__link link-underline" href="https://wa.me/525612350083?text=Quiero%20clases%20de%20desarrollo%20espiritual" target="_blank" rel="noopener">Pedir info</a>
+      </article>
+    </div>
+  </div>
+
+  <div class="container services__cta reveal">
+    <a class="btn" href="https://wa.me/525612350083?text=Quiero%20agendar%20una%20consulta" target="_blank" rel="noopener">Solicitar consulta</a>
   </div>
 </section>
 
@@ -250,7 +304,7 @@
       <h2 class="big">Misas espirituales</h2>
       <p>Contamos con Mediums para conocer cualquier tipo de situación espiritual. Si en la noche te sientes que ni se tiene descanso, que alguien nos observa, que tenemos preocupaciones que no pasan o sueños recurrentes, esta es la herramienta religiosa para mejorar la situación y ascender espiritualmente.</p>
       <p>Los espíritus también determinan muchas de las cosas que hacemos, gustos que tenemos o hasta actitudes nuestras. Una misa espiritual da luz a todo ese tipo de respuestas, dictaminado por energías que están con cada uno de nosotros desde antes de nacer.</p>
-      <a class="btn" href="https://wa.me/525612350083?text=Quiero%20agendar%20una%20misa%20espiritual" target="_blank" rel="noopener">Agendar misa espiritual</a>
+      <a class="link-underline" href="https://wa.me/525612350083?text=Quiero%20agendar%20una%20misa%20espiritual" target="_blank" rel="noopener">Agendar una misa espiritual</a>
     </div>
   </div>
 </section>
