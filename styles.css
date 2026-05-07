@@ -327,13 +327,9 @@ h1{ font-weight: 600; }
   display: grid; grid-template-columns: 1fr; gap: 48px; align-items: start;
 }
 .intro__media{
-  position: relative; max-width: 520px;
-  background: var(--paper-deep);
+  position: relative; max-width: 460px; width: 100%; margin: 0 auto;
 }
-.intro__media img{
-  width: 100%; aspect-ratio: 4/5; object-fit: cover;
-  filter: contrast(1.05) saturate(.95);
-}
+.intro__media .placeholder{ aspect-ratio: 4/5; }
 .intro__copy h3.big{
   font-family: var(--serif-display);
   font-size: clamp(2.4rem, 5vw, 4rem);
@@ -362,15 +358,7 @@ h1{ font-weight: 600; }
 .featured__grid{
   display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center;
 }
-.featured__media{ order: -1; }
-.img-stack{ position: relative; height: 380px; }
-.img-stack img{
-  position: absolute;
-  width: 65%; height: 80%; object-fit: cover;
-  filter: contrast(1.05) saturate(.92);
-}
-.img-stack__a{ top: 0; left: 0; }
-.img-stack__b{ bottom: 0; right: 0; }
+.featured__media{ order: -1; max-width: 520px; margin: 0 auto; width: 100%; }
 .featured__copy h3.big{
   font-family: var(--serif-display);
   font-size: clamp(2.2rem, 4.6vw, 3.6rem);
@@ -548,29 +536,39 @@ h1{ font-weight: 600; }
   display: block;
 }
 
-/* ========== Misas ========== */
+/* ========== Misas — single narrow column essay + bleed image ========== */
 .misas{
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: clamp(80px, 14vh, 140px) 0 0;
   border-bottom: 1px solid var(--rule);
 }
-.misas__grid{
-  display: grid; grid-template-columns: 1fr; gap: 48px; align-items: start;
+.misas__essay{
+  max-width: 60ch;
+  margin: 0 auto;
 }
-.misas__media{ background: var(--paper-deep); }
-.misas__media img{
-  width: 100%; aspect-ratio: 5/4; object-fit: cover;
-  filter: contrast(1.05) saturate(.92);
-}
-.misas__copy h2.big{
+.misas__title{
   font-family: var(--serif-display);
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4.4vw, 3.6rem);
   font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 0.98;
-  margin-bottom: 0.5em;
+  font-style: italic;
+  letter-spacing: -0.022em;
+  line-height: 1.08;
+  margin-bottom: 0.7em;
+  color: var(--ink);
 }
-.misas__copy p{
-  max-width: 58ch;
+.misas__essay p{
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 1.2em;
+}
+.misas__essay > a{ display: inline-block; margin-top: 0.4em; }
+.misas__bleed{
+  margin: clamp(64px, 10vh, 120px) 0 0;
+  padding: 0;
+}
+.misas__bleed .placeholder{
+  width: 100%; max-width: none;
+  margin: 0; aspect-ratio: 16/9;
+  border-left: 0; border-right: 0;
 }
 
 /* ========== TikTok ========== */
@@ -586,50 +584,103 @@ h1{ font-weight: 600; }
 .tiktok__item .tiktok-embed{ margin: 0 !important; width: 100% !important; min-width: 0 !important; }
 .tiktok__cta{ text-align: left; margin-top: 56px; }
 
-/* ========== Testimonios (Phase 1+2: grid, no avatars) ========== */
+/* ========== Testimonios — pull-quote + secondary trio ========== */
 .testimonios{
-  padding: clamp(80px, 12vh, 140px) 0;
+  padding: clamp(90px, 14vh, 150px) 0;
   border-bottom: 1px solid var(--rule);
 }
-.rating{
-  display: inline-flex; gap: 10px; align-items: baseline;
-  font-family: var(--mono); font-size: 0.78rem;
-  text-transform: uppercase; letter-spacing: 0.18em;
+.rating-line{
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
   color: var(--ink-mute);
-  margin-top: 1em;
+  margin: 0 0 60px;
 }
-.rating .stars{ color: var(--oshun); letter-spacing: 0.1em; font-size: 0.95rem; }
-.rating strong{ color: var(--ink); font-weight: 500; }
 
-.testimonios__grid{
-  display: grid; grid-template-columns: 1fr; gap: 0;
-  border-top: 1px solid var(--rule);
+.pullquote{
+  margin: 0 0 clamp(56px, 9vh, 100px);
+  max-width: 22ch;
+  position: relative;
 }
-.t-card{
-  margin: 0; padding: 36px 0;
-  border-bottom: 1px solid var(--rule);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-.t-card blockquote{
-  margin: 0;
+.pullquote blockquote{ margin: 0; }
+.pullquote blockquote p{
   font-family: var(--serif-display);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
-  line-height: 1.35;
+  font-size: clamp(2rem, 6vw, 4.6rem);
+  letter-spacing: -0.028em;
+  line-height: 1.04;
+  color: var(--ink);
+  margin: 0 0 0.8em;
+  text-indent: -0.45em;
+}
+.pullquote figcaption{
+  display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline;
+  margin-top: 1.4em;
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+}
+.pullquote cite{
+  font-family: var(--serif-body);
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--ink);
 }
-.t-card figcaption{
-  display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline;
+.pullquote__meta{
   font-family: var(--mono);
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--ink-mute);
 }
-.t-card figcaption strong{ font-weight: 500; color: var(--ink); }
+
+.quotes-row{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+.quote-small{
+  margin: 0;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+.quote-small blockquote{ margin: 0; }
+.quote-small blockquote p{
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  letter-spacing: -0.012em;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0;
+}
+.quote-small figcaption{
+  display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-mute);
+}
+.quote-small cite{
+  font-style: normal;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+@media (min-width: 800px){
+  .pullquote{ max-width: 18ch; }
+  .pullquote blockquote p{ font-size: clamp(2.6rem, 6.5vw, 5.4rem); }
+  .quotes-row{ grid-template-columns: 1fr 1fr 1fr; column-gap: 44px; }
+  .quote-small{ padding: 32px 0; }
+}
 
 /* ========== FAQ ========== */
 .faq{
@@ -703,50 +754,111 @@ h1{ font-weight: 600; }
   color: var(--ink-mute);
 }
 
-/* ========== Footer ========== */
+/* ========== Footer — address/hours prominent, social inline ========== */
 .site-footer{
-  padding: 80px 0 0;
+  padding: clamp(80px, 12vh, 130px) 0 30px;
   background: var(--paper);
   color: var(--ink-soft);
   border-top: 1px solid var(--rule);
 }
-.footer__grid{
-  display: grid; grid-template-columns: 1fr; gap: 40px;
-}
-.footer__brand p{ margin-top: 18px; max-width: 380px; font-size: 0.98rem; }
-.footer__col h4{
-  font-family: var(--mono);
-  font-size: 0.74rem;
+.footer__hero{ max-width: 720px; }
+.footer__address{
+  font-family: var(--serif-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--ink-mute);
-  margin: 0 0 18px;
+  letter-spacing: -0.022em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin: 0 0 36px;
 }
-.footer__col ul li{
-  margin-bottom: 10px; font-size: 0.98rem; color: var(--ink-soft);
+.footer__address a{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.92em;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
 }
-.footer__col ul li strong{ color: var(--ink); font-weight: 500; }
-.footer__col a{ transition: color .2s; }
-.footer__col a:hover{ color: var(--eleggua-red); }
-.social{ display: flex; gap: 22px; flex-wrap: wrap; }
-.social a{
+.footer__address a:hover{ border-bottom-color: var(--eleggua-red); color: var(--eleggua-red); }
+.footer__hours{
+  display: flex; flex-wrap: wrap; gap: 8px 28px;
+  font-family: var(--serif-body);
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+.footer__hours em{
+  font-style: italic;
+  color: var(--ink);
+  font-weight: 500;
+}
+.footer__email{
+  font-family: var(--serif-body);
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+.footer__email a{
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+.footer__email a:hover{ color: var(--eleggua-red); border-bottom-color: var(--eleggua-red); }
+
+.footer__rule{ margin: clamp(48px, 8vh, 80px) 0 32px; }
+
+.footer__bottom{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 36px;
+}
+.footer__brand{
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  column-gap: 16px;
+  align-items: start;
+  max-width: 520px;
+}
+.footer__brand .brand__mark{ width: 56px; height: 56px; }
+.footer__brand p{
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--ink-soft);
+}
+.footer__social{
+  display: flex; flex-wrap: wrap; gap: 24px;
+}
+.footer__social a{
   font-family: var(--mono);
   font-size: 0.78rem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--ink);
   border-bottom: 1px solid var(--ink);
   padding-bottom: 2px;
 }
-.footer__base{
-  border-top: 1px solid var(--rule);
-  margin-top: 64px; padding: 22px 0;
+.footer__social a:hover{ color: var(--eleggua-red); border-bottom-color: var(--eleggua-red); }
+
+.footer__copy{
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--ink-mute);
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+@media (min-width: 800px){
+  .footer__bottom{
+    grid-template-columns: 1fr auto;
+    column-gap: 60px;
+    align-items: end;
+  }
+  .footer__social{ justify-content: flex-end; }
 }
 
 /* ========== Floating WhatsApp (single-emoji exception) ========== */
@@ -790,9 +902,7 @@ h1{ font-weight: 600; }
 
 /* ========== Responsive ========== */
 @media (min-width: 700px){
-  .testimonios__grid{ grid-template-columns: 1fr 1fr; column-gap: 56px; }
   .tiktok__grid{ grid-template-columns: 1fr 1fr; }
-  .footer__grid{ grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
 }
 @media (min-width: 1000px){
   .primary-nav{ display: block; }
@@ -805,10 +915,8 @@ h1{ font-weight: 600; }
   .hero__media{ max-width: none; margin: 0; align-self: stretch; }
   .hero__media .placeholder{ height: 100%; min-height: 480px; }
   .intro__grid{ grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center; }
+  .intro__media{ max-width: 460px; }
   .featured__grid{ grid-template-columns: 1fr 1.1fr; gap: 80px; }
-  .featured__media{ order: 0; }
-  .misas__grid{ grid-template-columns: 1fr 1fr; gap: 80px; }
-  .img-stack{ height: 520px; }
-  .testimonios__grid{ grid-template-columns: 1fr 1fr 1fr; column-gap: 56px; }
+  .featured__media{ order: 0; max-width: 460px; }
   .tiktok__grid{ grid-template-columns: 1fr 1fr 1fr; }
 }
