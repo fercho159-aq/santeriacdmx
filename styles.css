@@ -172,20 +172,49 @@ h1{ font-weight: 700; }
   position: sticky; top: 0; z-index: 50;
   background: var(--eleggua-red);
   border-bottom: 1px solid var(--eleggua-red);
-  height: var(--header-h);
   transition: border-color .25s;
 }
-.site-header.scrolled{ border-bottom-color: var(--rule); }
+.site-header.scrolled{ border-bottom-color: var(--eleggua-red); }
+
+.header-top{
+  background: rgba(0,0,0,.1);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.header-social{
+  display: flex; justify-content: flex-end;
+}
+.social-links{
+  display: flex; gap: 24px; margin: 0; padding: 0;
+  list-style: none;
+}
+.social-links a{
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,.9);
+  border-bottom: 1px solid rgba(255,255,255,.5);
+  padding-bottom: 2px;
+  transition: color .2s, border-color .2s;
+  text-decoration: none;
+}
+.social-links a:hover{
+  color: var(--white);
+  border-bottom-color: var(--white);
+}
+
 .nav-wrap{
   display: flex; align-items: center; justify-content: space-between;
   height: var(--header-h); gap: 18px;
 }
 .brand{ display: inline-flex; align-items: center; gap: 12px; }
 .brand__mark{
-  width: 40px; height: 40px; flex-shrink: 0;
+  width: 50px; height: 50px; flex-shrink: 0;
   border-radius: 50%; background: var(--white);
-  display: block; object-fit: contain; padding: 1px;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.5);
+  display: block; object-fit: contain; padding: 2px;
+  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.5);
 }
 .brand__text{ display: flex; flex-direction: column; line-height: 1; }
 .brand__text strong{
@@ -516,6 +545,20 @@ h1{ font-weight: 700; }
 }
 
 .services__cta{ margin-top: clamp(36px, 6vh, 64px); }
+
+/* ========== Images ========== */
+.hero-image, .intro-image, .featured-image, .services-image, .misas-image{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--rule);
+}
+
+.hero__media .hero-image{ aspect-ratio: 3/4; }
+.intro__media .intro-image{ aspect-ratio: 3/4; }
+.featured__media .featured-image{ aspect-ratio: 3/4; }
+.services__figure .services-image{ aspect-ratio: 3/4; }
+.misas__bleed .misas-image{ aspect-ratio: 16/9; width: 100%; max-width: none; border-left: 0; border-right: 0; }
 
 /* ========== Placeholders ========== */
 .placeholder{
