@@ -563,7 +563,7 @@ h1{ font-weight: 700; }
 .hero__media .hero-image{ aspect-ratio: 3/4; }
 .intro__media .intro-image{ aspect-ratio: 3/4; }
 .featured__media .featured-image{ aspect-ratio: 3/4; }
-.services__figure .services-image{ aspect-ratio: 3/2; }
+.services__figure .services-image{ aspect-ratio: 3/2; max-height: 260px; }
 .misas__bleed .misas-image{ aspect-ratio: 32/9; width: 100%; max-width: none; border-left: 0; border-right: 0; }
 
 /* ========== Placeholders ========== */
